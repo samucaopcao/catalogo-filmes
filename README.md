@@ -34,7 +34,7 @@ No Front-End utilizamos principalmete o React JS, já em seu Back-End a principa
 
 ## :rocket: Tecnologias
 
-Esse projeto foi desenvolvido com as seguintes tecnologias, antes de iniciar o desenvolvimento e clonar o projeto, é necessario que verifique que todas as tecnologias utilizadas estejam instaladas em sua maquina:
+Esse projeto foi desenvolvido com as seguintes tecnologias, antes de iniciar o desenvolvimento e clonar o projeto, é necessario que verifique se todas as tecnologias utilizadas estão instaladas em sua máquina:
 
 - [React.JS](https://pt-br.reactjs.org/)
 - [Node.JS](https://nodejs.org/pt-br/)
@@ -49,7 +49,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias, antes de iniciar o d
 Para visualizar esta aplicação, é necessário clonar o projeto do GitHub num diretório de sua preferência:
 
 ```shell
-cd "diretorio de sua preferencia"
+cd "diretório de sua preferência"
 git clone https://github.com/samucaopcao/catalogo-filmes
 ```
 
