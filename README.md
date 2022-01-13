@@ -46,7 +46,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias, antes de iniciar o d
 
 ## :desktop_computer:	Desenvolvimento
 
-Para vizualizar esta aplicação, é necessário clonar o projeto do GitHub num diretório de sua preferência:
+Para visualizar esta aplicação, é necessário clonar o projeto do GitHub num diretório de sua preferência:
 
 ```shell
 cd "diretorio de sua preferencia"
