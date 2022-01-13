@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-  ☕ Catalogo de Filmes
+  ☕ Catálogo de Filmes
 </h4>
 
 <p align="center">
