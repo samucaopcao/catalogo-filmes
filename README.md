@@ -50,7 +50,7 @@ Para vizualizar esta aplicação, é necessário clonar o projeto do GitHub num 
 
 ```shell
 cd "diretorio de sua preferencia"
-git clone https://github.com/Joel-Irineu/modelo-readme.git
+git clone https://github.com/samucaopcao/catalogo-filmes
 ```
 
 Ou acessá-la pelo link: ***********
