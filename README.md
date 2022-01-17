@@ -53,7 +53,7 @@ cd "diretório de sua preferência"
 git clone https://github.com/samucaopcao/catalogo-filmes
 ```
 
-Ou acessá-la pelo link: ***********
+Ou acessá-la pelo link: https://catalogo-filmes-devsuperior.netlify.app/
 <!--
 ## :memo: Licença
 
