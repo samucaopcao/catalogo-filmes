@@ -6,14 +6,14 @@ type Props = {
     movie: Movie;
 }
 
-function MovieCard({movie} : Props) {
+function MovieCard({ movie }: Props) {
 
     return (
         <div>
             <img className="catalogo-filmes-movie-card-image" src={movie.image} alt={movie.title} />
             <div className="catalogo-filmes-card-bottom-container">
                 <h3>{movie.title}</h3>
-                <MovieScore />
+                <MovieScore count={movie.count} score={movie.score} />
 
                 <Link to={`/form/${movie.id}`}>
                     <div className="btn btn-primary catalogo-filmes-btn">Avaliar</div>
