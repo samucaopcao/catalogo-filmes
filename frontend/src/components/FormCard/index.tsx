@@ -1,31 +1,57 @@
 import './styles.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Movie } from 'types/movie';
 import { useEffect, useState } from 'react';
 import { BASE_URL } from 'utils/requests';
-import axios from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
+import { validateEmail } from 'utils/validate';
 
 type Props = {
     movieId: string;
 }
 
-function FormCard({movieId} : Props) {
+function FormCard({ movieId }: Props) {
 
-const [movie, setMovie] = useState<Movie>();
+    const navigate = useNavigate();    
+    const [movie, setMovie] = useState<Movie>();
 
-useEffect(() => {
-    axios.get(`${BASE_URL}/movies/${movieId}`)
-    .then(response => {
-        setMovie(response.data);
-    })
-}, [movieId]);
+    useEffect(() => {
+        axios.get(`${BASE_URL}/movies/${movieId}`)
+            .then(response => {
+                setMovie(response.data);
+            })
+    }, [movieId]);
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        const email = (event.target as any).email.value;
+        const score = (event.target as any).score.value;
+
+        if (!validateEmail(email)) {
+            return;
+        }
+
+        const config: AxiosRequestConfig = {
+            baseURL: BASE_URL,
+            method: 'PUT',
+            url: '/scores',
+            data: {
+                email: email,
+                movieId: movieId,
+                score: score
+            }
+        }
+        axios(config).then(response => {
+            navigate("/");
+        })
+    }
 
     return (
         <div className="catalogo-filmes-form-container">
             <img className="catalogo-filmes-movie-card-image" src={movie?.image} alt={movie?.title} />
             <div className="catalogo-filmes-card-bottom-container">
                 <h3>{movie?.title}</h3>
-                <form className="catalogo-filmes-form">
+                <form className="catalogo-filmes-form" onSubmit={handleSubmit}>
                     <div className="form-group catalogo-filmes-form-group">
                         <label htmlFor="email">Informe seu email</label>
                         <input type="email" className="form-control" id="email" />
